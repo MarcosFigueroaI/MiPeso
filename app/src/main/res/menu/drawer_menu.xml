@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group >
+        <item android:title="Inicio" android:id="@id/listFragment" />
+        <item android:title="Agregar" android:id="@id/addFragment" />
+    </group>
+
+    <group >
+        <item android:title="Calcular macros" android:id="@id/macrosFragment" />
+    </group>
+</menu>
