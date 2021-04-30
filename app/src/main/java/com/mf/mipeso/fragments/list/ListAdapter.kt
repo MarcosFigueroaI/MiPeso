@@ -25,7 +25,7 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = pesoList[position]
         holder.itemView.fecha_txt.text = currentItem.dia + " " + currentItem.fecha
-        holder.itemView.peso_txt.text = "${currentItem.peso} Kg"
+        holder.itemView.peso_txt.text = "Peso: ${currentItem.peso} Kg"
 
         holder.itemView.rowLayout.setOnClickListener {
             val action = ListFragmentDirections.actionListFragmentToUpdateFragment(currentItem)

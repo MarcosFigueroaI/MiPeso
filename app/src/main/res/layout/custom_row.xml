@@ -5,19 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:id="@+id/rowLayout"
-    android:padding="24sp">
+    android:id="@+id/rowLayout">
 
     <androidx.cardview.widget.CardView
         android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="4dp">
+        app:cardCornerRadius="4dp"
+        android:layout_margin="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp"
+            android:layout_margin="8dp"
             android:orientation="vertical">
 
             <TextView
@@ -25,9 +25,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="10/10/2020"
-                android:textSize="28sp"
-                android:textStyle="bold" />
+                android:fontFamily="@font/nexa_bold"
+                android:text="nexa_bold 24"
+                android:textSize="24sp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -35,20 +35,13 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="Peso: "
-                    android:textSize="26sp"
-                    android:textStyle="bold" />
-
-                <TextView
                     android:id="@+id/peso_txt"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="80.0"
-                    android:textSize="24sp" />
+                    android:fontFamily="@font/nexa_light"
+                    android:text="nexa_light 14"
+                    android:textSize="14sp"/>
 
             </LinearLayout>
 

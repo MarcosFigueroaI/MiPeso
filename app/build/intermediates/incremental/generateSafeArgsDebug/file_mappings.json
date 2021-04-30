@@ -1,0 +1,1 @@
+[{"navFile":"src/main/res/navigation/my_nav.xml","javaFiles":["com.mf.mipeso.fragments.list.ListFragmentDirections","com.mf.mipeso.fragments.add.AddFragmentDirections","com.mf.mipeso.fragments.update.UpdateFragmentDirections","com.mf.mipeso.fragments.update.UpdateFragmentArgs","com.mf.mipeso.fragments.macros.MacrosFragmentDirections"]}]

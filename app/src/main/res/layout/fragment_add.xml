@@ -26,12 +26,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
-                android:hint="Peso"/>
+                android:hint="Peso"
+                android:fontFamily="@font/nexa_light"/>
 
             <Button
                 android:id="@+id/btnAgregar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/nexa_bold"
                 android:text="Agregar"
                 android:textColor="@color/white"/>
 
