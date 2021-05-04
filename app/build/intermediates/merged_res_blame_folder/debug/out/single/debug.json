@@ -116,6 +116,10 @@
         "source": "/Users/marcosfigueroaibarra/AndroidStudioProjects/MiPeso/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
+        "merged": "/Users/marcosfigueroaibarra/AndroidStudioProjects/MiPeso/app/build/intermediates/res/merged/debug/drawable_ic_remove.xml.flat",
+        "source": "/Users/marcosfigueroaibarra/AndroidStudioProjects/MiPeso/app/src/main/res/drawable/ic_remove.xml"
+    },
+    {
         "merged": "/Users/marcosfigueroaibarra/AndroidStudioProjects/MiPeso/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
         "source": "/Users/marcosfigueroaibarra/AndroidStudioProjects/MiPeso/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
     },

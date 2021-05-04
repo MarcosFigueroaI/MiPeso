@@ -33,6 +33,9 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         if (currentItem.esMayor == "ma") {
             holder.itemView.arrow.setImageResource(R.drawable.ic_arrow_up)
         }
+        if (currentItem.esMayor == "i") {
+            holder.itemView.arrow.setImageResource(R.drawable.ic_remove)
+        }
 
         holder.itemView.rowLayout.setOnClickListener {
             val action = ListFragmentDirections.actionListFragmentToUpdateFragment(currentItem)
