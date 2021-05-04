@@ -13,6 +13,7 @@ import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
 import com.mf.mipeso.model.Peso;
 import java.lang.Exception;
+import java.lang.Float;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
@@ -40,7 +41,7 @@ public final class PesoDao_Impl implements PesoDao {
     this.__insertionAdapterOfPeso = new EntityInsertionAdapter<Peso>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR IGNORE INTO `peso_table` (`id`,`dia`,`fecha`,`peso`) VALUES (nullif(?, 0),?,?,?)";
+        return "INSERT OR IGNORE INTO `peso_table` (`id`,`dia`,`fecha`,`peso`,`esMayor`) VALUES (nullif(?, 0),?,?,?,?)";
       }
 
       @Override
@@ -56,7 +57,16 @@ public final class PesoDao_Impl implements PesoDao {
         } else {
           stmt.bindString(3, value.getFecha());
         }
-        stmt.bindDouble(4, value.getPeso());
+        if (value.getPeso() == null) {
+          stmt.bindNull(4);
+        } else {
+          stmt.bindDouble(4, value.getPeso());
+        }
+        if (value.getEsMayor() == null) {
+          stmt.bindNull(5);
+        } else {
+          stmt.bindString(5, value.getEsMayor());
+        }
       }
     };
     this.__deletionAdapterOfPeso = new EntityDeletionOrUpdateAdapter<Peso>(__db) {
@@ -73,7 +83,7 @@ public final class PesoDao_Impl implements PesoDao {
     this.__updateAdapterOfPeso = new EntityDeletionOrUpdateAdapter<Peso>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR ABORT `peso_table` SET `id` = ?,`dia` = ?,`fecha` = ?,`peso` = ? WHERE `id` = ?";
+        return "UPDATE OR ABORT `peso_table` SET `id` = ?,`dia` = ?,`fecha` = ?,`peso` = ?,`esMayor` = ? WHERE `id` = ?";
       }
 
       @Override
@@ -89,8 +99,17 @@ public final class PesoDao_Impl implements PesoDao {
         } else {
           stmt.bindString(3, value.getFecha());
         }
-        stmt.bindDouble(4, value.getPeso());
-        stmt.bindLong(5, value.getId());
+        if (value.getPeso() == null) {
+          stmt.bindNull(4);
+        } else {
+          stmt.bindDouble(4, value.getPeso());
+        }
+        if (value.getEsMayor() == null) {
+          stmt.bindNull(5);
+        } else {
+          stmt.bindString(5, value.getEsMayor());
+        }
+        stmt.bindLong(6, value.getId());
       }
     };
     this.__preparedStmtOfDeleteAllPesos = new SharedSQLiteStatement(__db) {
@@ -185,6 +204,7 @@ public final class PesoDao_Impl implements PesoDao {
           final int _cursorIndexOfDia = CursorUtil.getColumnIndexOrThrow(_cursor, "dia");
           final int _cursorIndexOfFecha = CursorUtil.getColumnIndexOrThrow(_cursor, "fecha");
           final int _cursorIndexOfPeso = CursorUtil.getColumnIndexOrThrow(_cursor, "peso");
+          final int _cursorIndexOfEsMayor = CursorUtil.getColumnIndexOrThrow(_cursor, "esMayor");
           final List<Peso> _result = new ArrayList<Peso>(_cursor.getCount());
           while(_cursor.moveToNext()) {
             final Peso _item;
@@ -194,9 +214,15 @@ public final class PesoDao_Impl implements PesoDao {
             _tmpDia = _cursor.getString(_cursorIndexOfDia);
             final String _tmpFecha;
             _tmpFecha = _cursor.getString(_cursorIndexOfFecha);
-            final float _tmpPeso;
-            _tmpPeso = _cursor.getFloat(_cursorIndexOfPeso);
-            _item = new Peso(_tmpId,_tmpDia,_tmpFecha,_tmpPeso);
+            final Float _tmpPeso;
+            if (_cursor.isNull(_cursorIndexOfPeso)) {
+              _tmpPeso = null;
+            } else {
+              _tmpPeso = _cursor.getFloat(_cursorIndexOfPeso);
+            }
+            final String _tmpEsMayor;
+            _tmpEsMayor = _cursor.getString(_cursorIndexOfEsMayor);
+            _item = new Peso(_tmpId,_tmpDia,_tmpFecha,_tmpPeso,_tmpEsMayor);
             _result.add(_item);
           }
           return _result;

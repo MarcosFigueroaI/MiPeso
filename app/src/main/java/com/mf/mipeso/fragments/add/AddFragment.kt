@@ -97,7 +97,7 @@ class AddFragment : Fragment() {
 
         if (inputCheck(fecha, pesoKg)) {
             // Create Peso Object
-            val peso = Peso(0, nombreDia, fecha, pesoKg.toString().toFloat())
+            val peso = Peso(0, nombreDia, fecha, pesoKg.toString().toFloat(), null)
             // Add Data to Database
             mPesoViewModel.addPeso(peso)
             Toast.makeText(requireContext(), "Agregado exitosamente!", Toast.LENGTH_LONG).show()

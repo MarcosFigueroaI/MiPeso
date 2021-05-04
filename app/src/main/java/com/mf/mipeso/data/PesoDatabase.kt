@@ -24,7 +24,7 @@ abstract class PesoDatabase(): RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     PesoDatabase::class.java,
-                    "peso_database_test"
+                    "peso_database_test11"
                 ).build()
                 INSTANCE = instance
                 return instance

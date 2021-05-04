@@ -46,7 +46,7 @@ class UpdateFragment : Fragment() {
 
         if (inputCheck(pesoKg)) {
             // Create Peso Object
-            val updatePeso = Peso(args.currentPeso.id, args.currentPeso.dia, args.currentPeso.fecha, pesoKg.toString().toFloat())
+            val updatePeso = Peso(args.currentPeso.id, args.currentPeso.dia, args.currentPeso.fecha, pesoKg.toString().toFloat(), null)
             // Update Current Peso
             mPesoViewModel.updatePeso(updatePeso)
             Toast.makeText(requireContext(), "Modificaste exitosamente!", Toast.LENGTH_LONG).show()

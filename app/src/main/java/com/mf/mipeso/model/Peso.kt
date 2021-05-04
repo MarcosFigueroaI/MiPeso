@@ -1,5 +1,6 @@
 package com.mf.mipeso.model
 
+import android.media.Image
 import android.os.Parcelable
 import android.text.Editable
 import androidx.room.Entity
@@ -13,5 +14,6 @@ data class Peso(
     val id: Int,
     val dia: String,
     val fecha: String,
-    val peso: Float
+    val peso: Float?,
+    var esMayor: String?
 ): Parcelable

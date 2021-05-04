@@ -17,35 +17,43 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/fecha_txt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:fontFamily="@font/nexa_bold"
-                android:text="nexa_bold 24"
-                android:textSize="24sp"/>
+            android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/fecha_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nexa_bold"
+                    android:text="nexa_bold 24"
+                    android:textSize="24sp"/>
 
                 <TextView
                     android:id="@+id/peso_txt"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nexa_light"
                     android:text="nexa_light 14"
-                    android:textSize="14sp"/>
+                    android:textSize="18sp"/>
 
             </LinearLayout>
 
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_down"/>
+
         </LinearLayout>
+
+
 
     </androidx.cardview.widget.CardView>
 

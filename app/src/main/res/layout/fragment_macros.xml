@@ -12,12 +12,14 @@
         android:inputType="numberDecimal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ingresa tu peso en Kg" />
+        android:hint="Ingresa tu peso en Kg"
+        android:fontFamily="@font/nexa_light"/>
 
     <Button
         android:id="@+id/btnCalcularMacros"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/nexa_bold"
         android:text="Calcular macros"
         android:textColor="@color/white" />
 
@@ -31,6 +33,7 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nexa_bold"
             android:text="Peso en libras:"
             android:textSize="24sp" />
 
@@ -39,8 +42,8 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:fontFamily="@font/nexa_light"
+            android:textSize="24sp" />
 
     </LinearLayout>
 
@@ -54,6 +57,7 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nexa_bold"
             android:text="Calorias:"
             android:textSize="24sp" />
 
@@ -62,8 +66,8 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:fontFamily="@font/nexa_light"
+            android:textSize="24sp"/>
 
     </LinearLayout>
 
@@ -77,6 +81,7 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nexa_bold"
             android:text="Proteinas:"
             android:textSize="24sp" />
 
@@ -85,8 +90,8 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:fontFamily="@font/nexa_light"
+            android:textSize="24sp" />
 
     </LinearLayout>
 
@@ -100,6 +105,7 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nexa_bold"
             android:text="Carbohidratos:"
             android:textSize="24sp" />
 
@@ -108,8 +114,8 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:fontFamily="@font/nexa_light"
+            android:textSize="24sp" />
 
     </LinearLayout>
 
@@ -123,6 +129,7 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nexa_bold"
             android:text="Grasas:"
             android:textSize="24sp" />
 
@@ -131,8 +138,8 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:fontFamily="@font/nexa_light"
+            android:textSize="24sp" />
 
     </LinearLayout>
 
@@ -141,6 +148,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:fontFamily="@font/nexa_bold"
         android:text="Guardar macros"
         android:textColor="@color/white" />
 

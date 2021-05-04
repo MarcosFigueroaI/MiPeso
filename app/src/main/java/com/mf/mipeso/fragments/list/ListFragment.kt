@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mf.mipeso.R
 import com.mf.mipeso.model.Peso
@@ -34,7 +35,22 @@ class ListFragment : Fragment() {
         // PesoViewModel
         mPesoViewModel = ViewModelProvider(this).get(PesoViewModel::class.java)
         mPesoViewModel.getPeso.observe(viewLifecycleOwner, Observer { peso ->
-            adapter.setData(peso)
+            var primerPeso: Float? = 80.toFloat()
+            var lastPeso: Float? = primerPeso
+            var lista = ArrayList<Peso>()
+            for (i in peso.reversed()) {
+                if (i.peso!! > lastPeso!!) {
+                    lista.add(Peso(i.id, i.dia, i.fecha, i.peso, "ma"))
+                }
+                if (i.peso < lastPeso) {
+                    lista.add(Peso(i.id, i.dia, i.fecha, i.peso, "me"))
+                }
+                if (i.peso.equals(lastPeso)) {
+                    lista.add(Peso(i.id, i.dia, i.fecha, i.peso, "i"))
+                }
+                lastPeso = i.peso
+            }
+            adapter.setData(lista.reversed())
         })
 
         view.floatingActionButton.setOnClickListener {

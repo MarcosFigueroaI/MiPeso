@@ -30,9 +30,9 @@ public final class PesoDatabase_Impl extends PesoDatabase {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `peso_table` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `dia` TEXT NOT NULL, `fecha` TEXT NOT NULL, `peso` REAL NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `peso_table` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `dia` TEXT NOT NULL, `fecha` TEXT NOT NULL, `peso` REAL, `esMayor` TEXT)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'ff19c9361d256a21eeb158dad955f06c')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '8518cdced6805b4cf2acd1459b957345')");
       }
 
       @Override
@@ -76,11 +76,12 @@ public final class PesoDatabase_Impl extends PesoDatabase {
 
       @Override
       protected RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
-        final HashMap<String, TableInfo.Column> _columnsPesoTable = new HashMap<String, TableInfo.Column>(4);
+        final HashMap<String, TableInfo.Column> _columnsPesoTable = new HashMap<String, TableInfo.Column>(5);
         _columnsPesoTable.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsPesoTable.put("dia", new TableInfo.Column("dia", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsPesoTable.put("fecha", new TableInfo.Column("fecha", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsPesoTable.put("peso", new TableInfo.Column("peso", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsPesoTable.put("peso", new TableInfo.Column("peso", "REAL", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsPesoTable.put("esMayor", new TableInfo.Column("esMayor", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysPesoTable = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesPesoTable = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoPesoTable = new TableInfo("peso_table", _columnsPesoTable, _foreignKeysPesoTable, _indicesPesoTable);
@@ -92,7 +93,7 @@ public final class PesoDatabase_Impl extends PesoDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "ff19c9361d256a21eeb158dad955f06c", "2576145298462a51ef6f5b6020f46e3c");
+    }, "8518cdced6805b4cf2acd1459b957345", "95f9457e40a5fae1390df18e893abaf8");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)

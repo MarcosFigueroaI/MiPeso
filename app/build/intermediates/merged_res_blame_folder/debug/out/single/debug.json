@@ -16,16 +16,20 @@
         "source": "/Users/marcosfigueroaibarra/AndroidStudioProjects/MiPeso/app/src/main/res/layout/fragment_list.xml"
     },
     {
-        "merged": "/Users/marcosfigueroaibarra/AndroidStudioProjects/MiPeso/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "/Users/marcosfigueroaibarra/AndroidStudioProjects/MiPeso/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
-    },
-    {
         "merged": "/Users/marcosfigueroaibarra/AndroidStudioProjects/MiPeso/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "/Users/marcosfigueroaibarra/AndroidStudioProjects/MiPeso/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
+        "merged": "/Users/marcosfigueroaibarra/AndroidStudioProjects/MiPeso/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/marcosfigueroaibarra/AndroidStudioProjects/MiPeso/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
         "merged": "/Users/marcosfigueroaibarra/AndroidStudioProjects/MiPeso/app/build/intermediates/res/merged/debug/drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "/Users/marcosfigueroaibarra/AndroidStudioProjects/MiPeso/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/marcosfigueroaibarra/AndroidStudioProjects/MiPeso/app/build/intermediates/res/merged/debug/drawable_ic_arrow_up.xml.flat",
+        "source": "/Users/marcosfigueroaibarra/AndroidStudioProjects/MiPeso/app/src/main/res/drawable/ic_arrow_up.xml"
     },
     {
         "merged": "/Users/marcosfigueroaibarra/AndroidStudioProjects/MiPeso/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
@@ -74,6 +78,10 @@
     {
         "merged": "/Users/marcosfigueroaibarra/AndroidStudioProjects/MiPeso/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "/Users/marcosfigueroaibarra/AndroidStudioProjects/MiPeso/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/marcosfigueroaibarra/AndroidStudioProjects/MiPeso/app/build/intermediates/res/merged/debug/drawable_ic_arrow_down.xml.flat",
+        "source": "/Users/marcosfigueroaibarra/AndroidStudioProjects/MiPeso/app/src/main/res/drawable/ic_arrow_down.xml"
     },
     {
         "merged": "/Users/marcosfigueroaibarra/AndroidStudioProjects/MiPeso/app/build/intermediates/res/merged/debug/drawable_ic_delete.xml.flat",

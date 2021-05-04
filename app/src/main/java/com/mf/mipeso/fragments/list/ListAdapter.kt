@@ -1,13 +1,17 @@
 package com.mf.mipeso.fragments.list
 
+import android.content.Context
+import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.mf.mipeso.R
 import com.mf.mipeso.model.Peso
 import kotlinx.android.synthetic.main.custom_row.view.*
+import kotlinx.coroutines.withContext
 import java.util.*
 
 class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
@@ -26,6 +30,9 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         val currentItem = pesoList[position]
         holder.itemView.fecha_txt.text = currentItem.dia + " " + currentItem.fecha
         holder.itemView.peso_txt.text = "Peso: ${currentItem.peso} Kg"
+        if (currentItem.esMayor == "ma") {
+            holder.itemView.arrow.setImageResource(R.drawable.ic_arrow_up)
+        }
 
         holder.itemView.rowLayout.setOnClickListener {
             val action = ListFragmentDirections.actionListFragmentToUpdateFragment(currentItem)
