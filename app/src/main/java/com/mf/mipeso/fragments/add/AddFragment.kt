@@ -42,7 +42,6 @@ class AddFragment : Fragment() {
         val mes = today.get(Calendar.MONTH).plus(1)
         val año = today.get(Calendar.YEAR)
         fecha = "$dia/$mes/$año"
-        //println(fecha)
 
         // Nombre Dia
         when (day) {
@@ -54,7 +53,6 @@ class AddFragment : Fragment() {
             6 -> nombreDia = "Viernes"
             7 -> nombreDia = "Sabado"
         }
-        //println(nombreDia)
 
         // Seleccionar la fecha
         view.datePicker.init(
@@ -93,11 +91,11 @@ class AddFragment : Fragment() {
     }
 
     private fun agregarDatos() {
-        val pesoKg = txtPeso.text
+        val pesoKg = txtPeso.text.toString()
 
-        if (inputCheck(fecha, pesoKg)) {
+        if (inputCheck(pesoKg)) {
             // Create Peso Object
-            val peso = Peso(0, nombreDia, fecha, pesoKg.toString().toFloat(), null)
+            val peso = Peso(0, nombreDia, fecha, pesoKg.toFloat(), null)
             // Add Data to Database
             mPesoViewModel.addPeso(peso)
             Toast.makeText(requireContext(), "Agregado exitosamente!", Toast.LENGTH_LONG).show()
@@ -108,8 +106,8 @@ class AddFragment : Fragment() {
         }
     }
 
-    private fun inputCheck(fecha: String, peso: Editable): Boolean {
-        return !(TextUtils.isEmpty(fecha) && peso.isEmpty())
+    private fun inputCheck(peso: String): Boolean {
+        return !(TextUtils.isEmpty(peso))
     }
 
 }
